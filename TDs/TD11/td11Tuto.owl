@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#"
+     xml:base="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mange">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mangePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mangePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mangePar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#partieDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#partieDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#AnimalPlante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#AnimalPlante">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Arbre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Arbre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Branche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Branche">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#partieDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Arbre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Carnivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Carnivore">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mange"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Feuille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Feuille">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#partieDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Branche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Girafe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Girafe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Herbivore"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mange"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Feuille"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Herbivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Herbivore">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Animal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mange"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#partieDe"/>
+                                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Lion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Lion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Carnivore"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mange"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Herbivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#PlanteSavoureuse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#PlanteSavoureuse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Plante"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mangePar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Carnivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#mangePar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Herbivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Une PlanteSavoureuse est une Plante qui est mangée par un Herbivore et aussi par un Carnivore</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Batavia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Batavia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Feuille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#LaPalme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#LaPalme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Léo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Léo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Lion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Olivier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Olivier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Arbre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Rose-Marie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Rose-Marie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#PlanteSavoureuse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Sophie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Sophie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Girafe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Batavia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#LaPalme"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Léo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Olivier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Rose-Marie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Tuto#Sophie"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

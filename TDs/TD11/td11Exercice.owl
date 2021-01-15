@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#"
+     xml:base="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:td11Exercice="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#PretAAider -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#PretAAider">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#aime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#aime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#appartient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#appartient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#estDeTaille -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#estDeTaille"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#CadetDeGascogne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#CadetDeGascogne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Noble"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Mondaine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Comte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Comte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Noble"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Mondaine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Mondaine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Nez -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Nez"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Noble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Noble">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Soldat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Soldat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Humain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Taille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Taille"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Christian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Christian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#CadetDeGascogne"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Soldat"/>
+        <aime rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Roxane"/>
+        <appartient rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Cyrano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Cyrano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#CadetDeGascogne"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Soldat"/>
+        <aime rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Roxane"/>
+        <appartient rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#DeGuiche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#DeGuiche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Comte"/>
+        <aime rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Roxane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Grand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Grand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Taille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Nez1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Nez1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Nez"/>
+        <appartient rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Cyrano"/>
+        <estDeTaille rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Grand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment"/>
+        <appartient rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#DeGuiche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Roxane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Roxane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Mondaine"/>
+        <aime rdf:resource="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Christian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Christian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Cyrano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#DeGuiche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Grand"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Nez1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Regiment1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#Roxane"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
