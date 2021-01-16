@@ -1,0 +1,120 @@
+Prefix(:=<http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/stéphane/ontologies/2020/11/td11Exercice>
+
+Declaration(Class(:CadetDeGascogne))
+Declaration(Class(:Comte))
+Declaration(Class(:Humain))
+Declaration(Class(:Mondaine))
+Declaration(Class(:Nez))
+Declaration(Class(:Noble))
+Declaration(Class(:Regiment))
+Declaration(Class(:Soldat))
+Declaration(Class(:Taille))
+Declaration(ObjectProperty(:PretAAider))
+Declaration(ObjectProperty(:aime))
+Declaration(ObjectProperty(:appartient))
+Declaration(ObjectProperty(:estDeTaille))
+Declaration(NamedIndividual(:Christian))
+Declaration(NamedIndividual(:Cyrano))
+Declaration(NamedIndividual(:DeGuiche))
+Declaration(NamedIndividual(:Grand))
+Declaration(NamedIndividual(:Nez1))
+Declaration(NamedIndividual(:Regiment1))
+Declaration(NamedIndividual(:Roxane))
+############################
+#   Object Properties
+############################
+
+# Object Property: :PretAAider (:PretAAider)
+
+ObjectPropertyDomain(:PretAAider :Humain)
+ObjectPropertyRange(:PretAAider :Humain)
+
+# Object Property: :aime (:aime)
+
+ObjectPropertyDomain(:aime :Humain)
+
+
+############################
+#   Classes
+############################
+
+# Class: :CadetDeGascogne (:CadetDeGascogne)
+
+SubClassOf(:CadetDeGascogne :Noble)
+DisjointClasses(:CadetDeGascogne :Mondaine)
+
+# Class: :Comte (:Comte)
+
+SubClassOf(:Comte :Noble)
+
+# Class: :Mondaine (:Mondaine)
+
+SubClassOf(:Mondaine :Humain)
+
+# Class: :Noble (:Noble)
+
+SubClassOf(:Noble :Humain)
+
+# Class: :Regiment (:Regiment)
+
+SubClassOf(:Regiment :Humain)
+
+# Class: :Soldat (:Soldat)
+
+SubClassOf(:Soldat :Humain)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Christian (:Christian)
+
+ClassAssertion(:CadetDeGascogne :Christian)
+ClassAssertion(:Soldat :Christian)
+ObjectPropertyAssertion(:aime :Christian :Roxane)
+ObjectPropertyAssertion(:appartient :Christian :Regiment1)
+
+# Individual: :Cyrano (:Cyrano)
+
+ClassAssertion(:CadetDeGascogne :Cyrano)
+ClassAssertion(:Soldat :Cyrano)
+ObjectPropertyAssertion(:aime :Cyrano :Roxane)
+ObjectPropertyAssertion(:appartient :Cyrano :Regiment1)
+
+# Individual: :DeGuiche (:DeGuiche)
+
+ClassAssertion(:Comte :DeGuiche)
+ObjectPropertyAssertion(:aime :DeGuiche :Roxane)
+
+# Individual: :Grand (:Grand)
+
+ClassAssertion(:Taille :Grand)
+
+# Individual: :Nez1 (:Nez1)
+
+ClassAssertion(:Nez :Nez1)
+ObjectPropertyAssertion(:appartient :Nez1 :Cyrano)
+ObjectPropertyAssertion(:estDeTaille :Nez1 :Grand)
+
+# Individual: :Regiment1 (:Regiment1)
+
+ClassAssertion(:Regiment :Regiment1)
+ObjectPropertyAssertion(:appartient :Regiment1 :DeGuiche)
+
+# Individual: :Roxane (:Roxane)
+
+ClassAssertion(:Mondaine :Roxane)
+ObjectPropertyAssertion(:aime :Roxane :Christian)
+
+
+DifferentIndividuals(:Christian :Cyrano :DeGuiche :Grand :Nez1 :Regiment1 :Roxane)
+)
